@@ -1,6 +1,6 @@
-from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
+from .views import BookListCreateAPIView
 
 urlpatterns = [
-    path("",hello,name="hello"),
+    path('books/', BookListCreateAPIView.as_view(), name='book-list-create'),
 ]
